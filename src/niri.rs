@@ -743,7 +743,7 @@ impl State {
 
         if headless && create_wayland_socket {
             if let Backend::Headless(headless) = &mut state.backend {
-                if let Err(err) = headless.add_renderer() {
+                if let Err(err) = headless.add_renderer(&mut state.niri) {
                     warn!("failed to initialize headless renderer: {err:?}");
                 }
                 headless
