@@ -747,7 +747,7 @@ impl State {
                     warn!("failed to initialize headless renderer: {err:?}");
                 }
                 headless
-                    .create_virtual_output(&mut state.niri, 1920, 1080, 60)
+                    .create_virtual_output(&mut state.niri, 2736, 1824, 60)
                     .unwrap();
             }
         }
